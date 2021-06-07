@@ -25,7 +25,11 @@ task("accounts", "Prints the list of accounts", async () => {
   networks: {
     hardhat: {
       chainId: 1337
-    }
+    },
+    ropsten: {
+        url: `https://ropsten.infura.io/v3/${process.env.projectid}`,
+        accounts: [`0x${process.env.akey}`]
+      },
   }
 };
 
